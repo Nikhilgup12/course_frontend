@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Courses from './components/Courses';
+import Assignments from './components/Assignments';
+import AddCourse from './components/AddCourse';
+import UpdateCourse from './components/UpdateCourse';
+import AddAssignment from './components/AddAssignment';
+import UpdateAssignment from './components/UpdateAssignment';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      
+        <Switch>
+          <Route exact path="/" component={Courses} />
+          <Route path="/assignments/:courseId" component={Assignments} />
+          <Route path="/add-course" component={AddCourse} />
+          <Route path="/update-course/:id" component={UpdateCourse} />
+          <Route path="/add-assignment/:courseId" component={AddAssignment} />
+          <Route path="/update-assignment/:id" component={UpdateAssignment} />
+        </Switch>
+      
+    )
+  }
 }
 
 export default App;
