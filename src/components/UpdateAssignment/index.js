@@ -4,7 +4,7 @@ class UpdateAssignment extends Component {
   state = { title: '', due_date: '', description: '' };
 
   fetchAssignmentData = (id) => {
-    fetch(`http://localhost:3000/assignments/${id}`, {
+    fetch(`https://course-backend-1-ezqa.onrender.com/${id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ class UpdateAssignment extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const { id } = this.props.match.params;
-    fetch(`http://localhost:3000/assignments/${id}`, {
+    fetch(`https://course-backend-1-ezqa.onrender.com/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

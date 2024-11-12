@@ -8,7 +8,7 @@ class CourseCard extends Component {
 
   handleDelete = () => {
     const { course } = this.props;
-    fetch(`http://localhost:3000/courses/${course.id}`, {
+    fetch(`https://course-backend-1-ezqa.onrender.com/${course.id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

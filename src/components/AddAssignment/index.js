@@ -6,7 +6,7 @@ class AddAssignment extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const { courseId, title, due_date} = this.state;
-    fetch('http://localhost:3000/assignments', {
+    fetch('https://course-backend-1-ezqa.onrender.com/assignments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

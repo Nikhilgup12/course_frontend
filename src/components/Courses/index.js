@@ -8,7 +8,7 @@ class Courses extends Component {
 
   // API call to fetch courses
   fetchCourses = () => {
-    fetch('http://localhost:3000/courses', {
+    fetch('https://course-backend-1-ezqa.onrender.com/courses', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

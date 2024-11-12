@@ -5,7 +5,7 @@ class UpdateCourse extends Component {
 
   // Fetch existing course data for editing
   fetchCourseData = (id) => {
-    fetch(`http://localhost:3000/courses/${id}`, {
+    fetch(`https://course-backend-1-ezqa.onrender.com/${id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -20,7 +20,7 @@ class UpdateCourse extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const { id } = this.props.match.params;
-    fetch(`http://localhost:3000/courses/${id}`, {
+    fetch(`https://course-backend-1-ezqa.onrender.com/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

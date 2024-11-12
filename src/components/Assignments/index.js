@@ -7,7 +7,7 @@ class Assignments extends Component {
 
   // Fetch assignments based on course ID
   fetchAssignments = (courseId) => {
-    fetch(`http://localhost:3000/assignments/${courseId}`, {
+    fetch(`https://course-backend-1-ezqa.onrender.com/${courseId}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ class Assignments extends Component {
               </button>
               <button
                 onClick={() =>
-                  fetch(`http://localhost:3000/assignments/${assignment.id}`, {
+                  fetch(`https://course-backend-1-ezqa.onrender.com/${assignment.id}`, {
                     method: 'DELETE',
                     headers: {
                       'Content-Type': 'application/json',
