@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class UpdateCourse extends Component {
   state = { course_name: '', professor: '', start_date: '', end_date: '' };
 
-  // Fetch existing course data for editing
+
   fetchCourseData = (id) => {
     fetch(`https://course-backend-1-ezqa.onrender.com/${id}`, {
       method: 'GET',
@@ -16,7 +16,7 @@ class UpdateCourse extends Component {
       .catch((error) => console.error('Error fetching course:', error));
   };
 
-  // Handle form submission
+
   handleSubmit = (event) => {
     event.preventDefault();
     const { id } = this.props.match.params;

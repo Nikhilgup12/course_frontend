@@ -6,7 +6,7 @@ class Courses extends Component {
     courses: [],
   };
 
-  // API call to fetch courses
+
   fetchCourses = () => {
     fetch('https://course-backend-1-ezqa.onrender.com/courses', {
       method: 'GET',
@@ -19,7 +19,7 @@ class Courses extends Component {
       .catch((error) => console.error('Error fetching courses:', error));
   };
 
-  // Navigate to the Add Course page
+
   handleAddCourse = () => {
     this.props.history.push('/add-course');
   };

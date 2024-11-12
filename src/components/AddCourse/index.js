@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class AddCourse extends Component {
   state = { course_name: '', professor: '', start_date: '', end_date: '' };
 
-  // Handle form submission
+  
   handleSubmit = (event) => {
     event.preventDefault();
     fetch('https://course-backend-1-ezqa.onrender.com/courses', {
@@ -17,7 +17,6 @@ class AddCourse extends Component {
       .then(() => this.props.history.push('/'));
   };
 
-  // Handle input change
   handleChange = (event) => this.setState({ [event.target.name]: event.target.value });
 
   render() {

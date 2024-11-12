@@ -5,7 +5,7 @@ class Assignments extends Component {
     assignments: [],
   };
 
-  // Fetch assignments based on course ID
+
   fetchAssignments = (courseId) => {
     fetch(`https://course-backend-1-ezqa.onrender.com/${courseId}`, {
       method: 'GET',
